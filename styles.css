@@ -3,7 +3,7 @@ body {
 	background-color: black; 
 	font-family: 'Barlow Condensed', sans-serif;
 }
-p {
+.message {
 	color: white; 
 	font-size: 300%; 
 }
@@ -18,8 +18,13 @@ p {
 		height: auto;
 	}
 }
-.main_contents {
+.main-contents {
+	width: 100%;
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
