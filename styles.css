@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&display=swap');
+body {
+	background-color: black; 
+	font-family: 'Barlow Condensed', sans-serif;
+}
+p {
+	color: white; 
+	font-size: 300%; 
+}
+.logo {
+	width: 100%;
+	height: auto;
+}
+/* This media query is for screen sizes greater than those on mobile devices */
+@media screen and (min-width: 640px){
+	.logo {
+		width: 75%;
+		height: auto;
+	}
+}
+.main_contents {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
