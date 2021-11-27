@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&display=swap');
 body {
-	background-color: black; 
+	background-color: #03101e;
 	font-family: 'Barlow Condensed', sans-serif;
 }
 .message {
 	color: white; 
-	font-size: 300%; 
+	font-size: 300%;
 }
 .logo {
 	width: 100%;
@@ -14,7 +14,7 @@ body {
 /* This media query is for screen sizes greater than those on mobile devices */
 @media screen and (min-width: 640px){
 	.logo {
-		width: 75%;
+		width: 55%;
 		height: auto;
 	}
 }
