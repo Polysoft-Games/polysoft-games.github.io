@@ -1,0 +1,62 @@
+{% import "macros.html" as macros %}
+{% set gameLinks = section.extra.gameLinks %}
+{% set navLinkMap = section.extra.navLinkMap %}
+{% set socialLinkMap = section.extra.socialLinkMap %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Polysoft Games</title>
+    <meta name="author" content="Polysoft Games">
+    <meta name="description" content="We're Polysoft Games, a New Zealand-based indie game development studio.">
+</head>
+<body>
+    <header>
+        <a href=""><img src="https://picsum.photos/284/60" alt="Polysoft Games"></a>
+        {{ macros::renderNav(links=[
+            navLinkMap.about,
+            navLinkMap.blog,
+            navLinkMap.games,
+            navLinkMap.merch,
+        ]) }}
+        {{ macros::renderNav(links=[
+            socialLinkMap.youtube,
+            socialLinkMap.twitter,
+            socialLinkMap.instagram,
+        ]) }}
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div>
+            <section>
+                <h2>Studio</h2>
+                {{ macros::renderNav(links=[
+                    navLinkMap.about,
+                    navLinkMap.games,
+                    navLinkMap.merch,
+                    navLinkMap.contact,
+                ]) }}
+            </section>
+            <section>
+                <h2>Games</h2>
+                {{ macros::renderNav(links=gameLinks)}}
+            </section>
+            <section>
+                <h2>Social</h2>
+                {{ macros::renderNav(links=[
+                    socialLinkMap.steam,
+                    socialLinkMap.youtube,
+                    socialLinkMap.twitter,
+                    socialLinkMap.instagram,
+                ]) }}                
+            </section>
+        </div>
+        <div>© {{ now() | date(format="%Y") }} Polysoft Games Ltd - All rights reserved</div>
+    </footer>
+</body>
+</html>
