@@ -1,9 +1,9 @@
-{% macro renderNav(links, class="", displayType="name") %}
+{% macro renderNav(class="", displayType="name", links, opensInNewTab=false) %}
 <nav {% if class %} class="{{ class }}" {% endif %}>
     <ul>
         {%- for link in links -%}
             <li>
-                <a href="{{ link.href }}"">
+                <a {% if opensInNewTab %} target="_blank" {% endif %} href="{{ link.href }}"">
                     {%- if displayType == "icon" -%}
                     <i class="fa-lg {{ link.iconClass }}"></i>
                     {%- else -%}

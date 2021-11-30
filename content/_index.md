@@ -6,8 +6,8 @@ gameLinks = [
 
 navLinks = [
     { href = "/about", name = "About" },
-    { href = "/blog", name = "Blog" },
     { href = "/games", name = "Games" },
+    { href = "/news", name = "News" },
     { href = "/merch", name = "Merch" },
     { href = "/contact", name = "Contact"},
 ]
