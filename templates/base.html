@@ -31,7 +31,7 @@
             </a>
         </span>
         {{ macros::renderNav(class="site-navigation", links=navLinks | slice(end=-1)) }}
-        {{ macros::renderNav(class="site-socials", displayType="icon", links=socialLinks) }}
+        {{ macros::renderNav(class="site-socials", displayType="icon", links=socialLinks, opensInNewTab=true) }}
     </header>
     <main>
         {% block content %}{% endblock %}
@@ -48,7 +48,7 @@
             </section>
             <section>
                 <h2>Social</h2>
-                {{ macros::renderNav(links=socialLinks) }}                
+                {{ macros::renderNav(links=socialLinks, opensInNewTab=true) }}                
             </section>
         </div>
         <div class="copyright">© {{ now() | date(format="%Y") }} Polysoft Games Ltd - All rights reserved</div>
