@@ -1,6 +1,6 @@
 {% import "macros.html" as macros %}
 {% set gameLinks = section.extra.gameLinks %}
-{% set navLinkMap = section.extra.navLinkMap %}
+{% set navLinks = section.extra.navLinks %}
 {% set socialLinks = section.extra.socialLinks %}
 <!DOCTYPE html>
 <html lang="en">
@@ -30,12 +30,7 @@
                 <img src="polysoft-logo.svg" alt="Polysoft Games">
             </a>
         </span>
-        {{ macros::renderNav(class="site-navigation", links=[
-            navLinkMap.about,
-            navLinkMap.blog,
-            navLinkMap.games,
-            navLinkMap.merch,
-        ]) }}
+        {{ macros::renderNav(class="site-navigation", links=navLinks | slice(end=-1)) }}
         {{ macros::renderNav(class="site-socials", displayType="icon", links=socialLinks) }}
     </header>
     <main>
@@ -45,16 +40,11 @@
         <div class="footer-columns">
             <section>
                 <h2>Studio</h2>
-                {{ macros::renderNav(links=[
-                    navLinkMap.about,
-                    navLinkMap.games,
-                    navLinkMap.merch,
-                    navLinkMap.contact,
-                ]) }}
+                {{ macros::renderNav(links=navLinks) }}
             </section>
             <section>
                 <h2>Games</h2>
-                {{ macros::renderNav(links=gameLinks)}}
+                {{ macros::renderNav(links=gameLinks) }}
             </section>
             <section>
                 <h2>Social</h2>
