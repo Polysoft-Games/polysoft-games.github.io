@@ -29,8 +29,8 @@ footer {
     text-align: center;
     background-color: var(--footer);
     box-shadow: var(--footer-shadow);
-    padding-top: 30px;
-    padding-bottom: 15px;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 header li {
@@ -87,21 +87,28 @@ a:hover {
 
 .footer-columns {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 30px;
+
 }
 
 .footer-columns h2 {
     color: #FF0054;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-transform: uppercase;
-    letter-spacing: 1px;  
+    letter-spacing: 1px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 .footer-columns li {
-    margin: 5px 0;
+    margin: 20px 0;
+    font-size: 12px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .copyright {
     color: var(--copyright);
+    font-size: 10px;
 }
