@@ -4,11 +4,11 @@
         {%- for link in links -%}
             <li>
                 <a href="{{ link.href }}"">
-                    {% if displayType == "icon" %}
+                    {%- if displayType == "icon" -%}
                     <i class="fa-lg {{ link.iconClass }}"></i>
-                    {% else %}
+                    {%- else -%}
                     {{ link.name }}
-                    {% endif %}
+                    {%- endif -%}
                 </a>
             </li>
         {%- endfor -%}
