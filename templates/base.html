@@ -1,0 +1,57 @@
+{% import "macros.html" as macros %}
+{% set gameLinks = section.extra.gameLinks %}
+{% set navLinks = section.extra.navLinks %}
+{% set socialLinks = section.extra.socialLinks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Polysoft Games</title>
+    <meta name="author" content="Polysoft Games">
+    <meta name="description" content="We're Polysoft Games, a New Zealand-based indie game development studio.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/37ce712ed0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <span class="logo">
+            <a href="">
+                <img src="polysoft-logo.svg" alt="Polysoft Games">
+            </a>
+        </span>
+        {{ macros::renderNav(class="site-navigation", links=navLinks | slice(end=-1)) }}
+        {{ macros::renderNav(class="site-socials", displayType="icon", links=socialLinks) }}
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="footer-columns">
+            <section>
+                <h2>Studio</h2>
+                {{ macros::renderNav(links=navLinks) }}
+            </section>
+            <section>
+                <h2>Games</h2>
+                {{ macros::renderNav(links=gameLinks) }}
+            </section>
+            <section>
+                <h2>Social</h2>
+                {{ macros::renderNav(links=socialLinks) }}                
+            </section>
+        </div>
+        <div class="copyright">© {{ now() | date(format="%Y") }} Polysoft Games Ltd - All rights reserved</div>
+    </footer>
+</body>
+</html>
