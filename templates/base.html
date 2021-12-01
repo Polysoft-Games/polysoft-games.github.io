@@ -25,13 +25,15 @@
 </head>
 <body>
     <header>
-        <span class="logo">
+        <div class="logo">
             <a href="">
-                <img src="polysoft-logo.svg" alt="Polysoft Games">
+                <img src="polysoft-logo.svg" alt="Polysoft Games logo">
             </a>
-        </span>
-        {{ macros::renderNav(class="site-navigation", links=navLinks | slice(end=-1)) }}
-        {{ macros::renderNav(class="site-socials", displayType="icon", links=socialLinks, opensInNewTab=true) }}
+        </div>
+        <div class="header-nav-container">
+            {{ macros::renderNav(class="header-navigation", links=navLinks | slice(end=-1)) }}
+            {{ macros::renderNav(class="header-socials", displayType="icon", links=socialLinks, opensInNewTab=true) }}
+        </div>
     </header>
     <main>
         {% block content %}{% endblock %}
