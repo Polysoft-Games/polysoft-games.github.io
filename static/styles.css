@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 /* ELEMENTS */
 
 body {
     background: linear-gradient(48.1deg, #00152D 0%, #3E0015 100%);
-    color: white;
-    --accent: #FF0054;
-    --muted: #FFFFFF99;
-    --copyright: #5B5B5B;
-    --footer: #0000004c;
-    --footer-shadow: #00000040;
+    color: rgba(255, 255, 255, 80%);
+    --accent: rgba(255, 0, 84, 100%);
+    --muted: rgba(255, 255, 255, 60%);
+    --copyright: rgba(91, 91, 91, 100%);
+    --footer: rgba(0, 0, 0, 30%);
+    --footer-shadow: rgba(0, 0, 0, 25%);
 }
 
 header {
-    width: 80vw;
+    max-width: 80vw;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 header, footer {
@@ -38,7 +38,7 @@ header li {
 }
 
 h1 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 36px;
 }
 
@@ -53,8 +53,9 @@ a:hover {
 /* CLASSES */
 
 .logo {
-    min-width: 400px;
-    padding: 40px 0;
+    min-width: 304px;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .header-nav-container {
@@ -83,7 +84,7 @@ a:hover {
 
 .welcome {
     text-align: center;
-    max-width: 520px;
+    max-width: 700px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -91,8 +92,8 @@ a:hover {
 }
 
 .welcome img {
-    max-width: 169px;
-    max-height: 162px;
+    max-width: 149px;
+    margin-bottom: 30px;
 }
 
 .footer-columns {
