@@ -147,8 +147,12 @@ a:hover {
     margin-bottom: 40px;
 }
 
+.game-links {
+    display: flex;
+}
+
 .game-card a:first-of-type {
-    margin: 0 0;
+    margin-left: 0;
 }
 
 .game-card a {
