@@ -7,10 +7,20 @@ body {
     background: linear-gradient(48.1deg, #00152D 0%, #3E0015 100%);
     color: rgba(255, 255, 255, 80%);
     --accent: rgba(255, 0, 84, 100%);
+    --accent-drop-shadow: 0px 0px 30px rgba(255, 0, 84, 0.5);
     --muted: rgba(255, 255, 255, 40%);
     --copyright: rgba(91, 91, 91, 100%);
     --footer: rgba(0, 0, 0, 30%);
     --footer-shadow: rgba(0, 0, 0, 25%);
+
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+header, footer {
+    font-family: 'Rubik', sans-serif;
 }
 
 header {
@@ -21,11 +31,15 @@ header {
     justify-content: space-evenly;
 }
 
-header, footer {
-    font-family: 'Rubik', sans-serif;
+main {
+    flex-grow: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
 footer {
+    width: 100vw;
     text-align: center;
     background-color: var(--footer);
     box-shadow: var(--footer-shadow);
@@ -84,24 +98,14 @@ a:active {
     padding: 0 10px;
 }
 
-.horizontally-centered-column {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-
-.welcome {
+.message {
     text-align: center;
     max-width: 600px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-.welcome img {
+.message img {
     max-width: 149px;
-    filter: drop-shadow(0px 0px 30px rgba(255, 0, 84, 0.5));
+    filter: drop-shadow(var(--accent-drop-shadow));
     margin-bottom: 30px;
 }
 
@@ -109,7 +113,6 @@ a:active {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-
 }
 
 .footer-columns h2 {
@@ -117,8 +120,7 @@ a:active {
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin: 0 100px;
 }
 
 .footer-columns li {
