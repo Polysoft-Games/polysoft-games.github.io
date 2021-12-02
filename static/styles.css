@@ -7,7 +7,7 @@ body {
     background: linear-gradient(48.1deg, #00152D 0%, #3E0015 100%);
     color: rgba(255, 255, 255, 80%);
     --accent: rgba(255, 0, 84, 100%);
-    --muted: rgba(255, 255, 255, 60%);
+    --muted: rgba(255, 255, 255, 40%);
     --copyright: rgba(91, 91, 91, 100%);
     --footer: rgba(0, 0, 0, 30%);
     --footer-shadow: rgba(0, 0, 0, 25%);
@@ -44,10 +44,16 @@ h1 {
 
 a {
     color: var(--muted);
+    transition: 0.15s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: white;
+}
+
+a:active {
+    color: var(--accent);
+    transition: 0.15s;
 }
 
 /* CLASSES */
@@ -104,7 +110,7 @@ a:hover {
 }
 
 .footer-columns h2 {
-    color: #FF0054;
+    color: var(--accent);
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 1px;
