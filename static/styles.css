@@ -49,11 +49,13 @@ a {
 
 a:hover {
     color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 a:active {
     color: var(--accent);
     transition: 0.15s;
+    text-shadow: 0 0 20px rgba(255, 0, 84, 0.6);
 }
 
 /* CLASSES */
@@ -99,6 +101,7 @@ a:active {
 
 .welcome img {
     max-width: 149px;
+    filter: drop-shadow(0px 0px 30px rgba(255, 0, 84, 0.5));
     margin-bottom: 30px;
 }
 
