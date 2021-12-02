@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,500&family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400&display=swap');
 /* ELEMENTS */
 
 body {
@@ -22,10 +21,6 @@ header {
     justify-content: space-evenly;
 }
 
-header, footer {
-    font-family: 'Rubik', sans-serif;
-}
-
 footer {
     text-align: center;
     background-color: var(--footer);
@@ -38,8 +33,13 @@ header li {
     display: inline;
 }
 
-h1 {
+h1, main h2 {
     font-family: 'Barlow', sans-serif;
+}
+
+h1 {
+    font-style: italic;
+    font-weight: 500;
     font-size: 28px;
 }
 
