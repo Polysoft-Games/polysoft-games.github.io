@@ -56,14 +56,6 @@ a:active {
     transition: 0.15s;
 }
 
-a:hover {
-    color: white;
-}
-
-a:active {
-    color: var(--accent);
-}
-
 /* CLASSES */
 
 .logo {
