@@ -24,7 +24,7 @@ header, footer {
 }
 
 header {
-    max-width: 80vw;
+    width: 80vw;
     margin: auto;
     display: flex;
     align-items: center;
@@ -85,13 +85,13 @@ a:active {
 }
 
 .header-navigation {
-    margin-right: 80px;
+    margin-right: 20px;
 }
 
 .header-navigation li {
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 40px;
+    padding: 0 20px;
 }
 
 .header-socials li {
