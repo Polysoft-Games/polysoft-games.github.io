@@ -8,9 +8,10 @@ body {
     color: rgba(255, 255, 255, 80%);
     --accent: rgba(255, 0, 84, 100%);
     --muted: rgba(255, 255, 255, 60%);
-    --copyright: rgba(91, 91, 91, 100%);
+    --copyright: rgba(255, 255, 255, 30%);
     --footer: rgba(0, 0, 0, 30%);
     --footer-shadow: rgba(0, 0, 0, 25%);
+    font-family: 'Rubik', sans-serif;
 }
 
 header {
