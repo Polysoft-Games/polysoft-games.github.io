@@ -1,24 +1,5 @@
-# The URL the site will be built for
-base_url = "https://polysoftgames.com"
-
-title = "Polysoft Games"
-description = "We're Polysoft Games, a New Zealand-based indie game development studio."
-
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = false
-
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
-
-[markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-
++++
 [extra]
-# Put all your custom variables here
-author = "Polysoft Games"
-twitter_handle = "@PolysoftGames"
 gameLinks = [
     { href = "", name = "ROB"},
 ]
@@ -38,3 +19,4 @@ socialLinks = [
     { href = "https://twitter.com/PolysoftGames", iconClass = "fab fa-twitter", name = "Twitter" },
     { href = "https://www.instagram.com/polysoftgames/", iconClass = "fab fa-instagram", name = "Instagram" },
 ]
++++
