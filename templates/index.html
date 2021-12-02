@@ -1,3 +1,4 @@
+{% import "macros.html" as macros %}
 {% extends "base.html" %}
 
 {% block content %}
@@ -5,5 +6,7 @@
     <img src="polysoft-icon.svg" alt="Polysoft icon">
     <h1>We're Polysoft Games, a New Zealand-based indie game development studio. Making games is our favourite game.</h1>
 </div>
-<div style="height: 100vh" />
+<div style="height: 100vh">
+    {{ macros::renderGameCard(title="Rob", status="pre-alpha", description="Eventually you do plan to have dinosaurs on your dinosaur tour, right? What do they got in there? King Kong? God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs. Life finds a way. Life finds a way.", thumbnail="https://picsum.photos/600/900") }}
+</div>
 {% endblock content %}
