@@ -1,7 +1,7 @@
 {% import "macros.html" as macros %}
-{% set gameLinks = section.extra.gameLinks %}
-{% set navLinks = section.extra.navLinks %}
-{% set socialLinks = section.extra.socialLinks %}
+{% set gameLinks = config.extra.gameLinks %}
+{% set navLinks = config.extra.navLinks %}
+{% set socialLinks = config.extra.socialLinks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,12 +36,14 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 
+    {% block head %}{% endblock %}
+
     <script src="https://kit.fontawesome.com/37ce712ed0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="">
+            <a href="/">
                 <img src="polysoft-logo.svg" alt="Polysoft Games logo">
             </a>
         </div>
