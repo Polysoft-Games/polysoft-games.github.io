@@ -1,6 +1,9 @@
 # The URL the site will be built for
 base_url = "https://polysoftgames.com"
 
+title = "Polysoft Games"
+description = "We're Polysoft Games, a New Zealand-based indie game development studio."
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
@@ -14,3 +17,5 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+author = "Polysoft Games"
+twitter_handle = "@PolysoftGames"
