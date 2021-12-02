@@ -53,6 +53,15 @@ a:hover {
 
 a:active {
     color: var(--accent);
+    transition: 0.15s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+a:active {
+    color: #ff0054;
 }
 
 /* CLASSES */
