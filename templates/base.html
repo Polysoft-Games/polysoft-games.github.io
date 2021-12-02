@@ -1,7 +1,7 @@
 {% import "macros.html" as macros %}
-{% set gameLinks = section.extra.gameLinks %}
-{% set navLinks = section.extra.navLinks %}
-{% set socialLinks = section.extra.socialLinks %}
+{% set gameLinks = config.extra.gameLinks %}
+{% set navLinks = config.extra.navLinks %}
+{% set socialLinks = config.extra.socialLinks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="">
+            <a href="/">
                 <img src="polysoft-logo.svg" alt="Polysoft Games logo">
             </a>
         </div>
