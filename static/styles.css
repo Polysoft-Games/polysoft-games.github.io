@@ -57,11 +57,11 @@ a:active {
 }
 
 a:hover {
-    color: #ffffff;
+    color: white;
 }
 
 a:active {
-    color: #ff0054;
+    color: var(--accent);
 }
 
 /* CLASSES */
