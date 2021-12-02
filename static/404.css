@@ -1,0 +1,10 @@
+.error-main {
+    font-family: 'Rubik', sans-serif;
+    font-size: 64px;
+    color: #FF0054;
+    font-weight: bold;
+}
+
+.error-text {
+	font-size: 25px;
+}
