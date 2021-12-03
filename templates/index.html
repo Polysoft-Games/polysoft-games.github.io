@@ -10,7 +10,7 @@
         <img src="polysoft-icon.svg" alt="Polysoft icon">
         <h1>{{ config.description }} Making games is our favourite game.</h1>
     </div>
-
+    <div id="games">
     {%- for game in section.extra.games -%}
         <div class="game-card">
             <img src="{{ game.thumbnail }}" alt="{{ game.title }}">
@@ -30,4 +30,5 @@
             </div>
         </div>
     {%- endfor -%}
+</div>
 {% endblock content %}
