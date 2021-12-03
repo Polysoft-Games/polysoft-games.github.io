@@ -17,12 +17,13 @@
 .game-card {
     --rounded-edge: 20px;
     display: flex;
+    align-items: stretch;
     border-radius: var(--rounded-edge);
     max-width: 800px;
+    height: 375px;
     margin: 40px auto;
     background: linear-gradient(96.39deg, rgba(0, 29, 72, 0.5) 27.05%, rgba(0, 0, 0, 0.5) 100%);
     box-shadow: 0px 22px 94px -19px rgba(0, 0, 0, 0.5);
-    align-items: center;
 }
 
 .game-card img {
@@ -33,7 +34,14 @@
 }
 
 .game-card .preview {
+    display: flex;
+    flex-flow: column nowrap;
     padding: 50px;
+    height: 100%;
+}
+
+.game-card .about-the-game {
+    flex-grow: 1;
 }
 
 .game-card .title {
@@ -68,6 +76,7 @@
 
 .game-links {
     display: flex;
+    bottom: 0;
 }
 
 .game-card a:first-of-type {
