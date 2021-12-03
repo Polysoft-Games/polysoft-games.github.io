@@ -27,6 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    animation: fade-down 1s;
 }
 
 main {
@@ -35,6 +36,7 @@ main {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    animation: fade-in 1s;
 }
 
 footer {
@@ -44,6 +46,7 @@ footer {
     box-shadow: var(--footer-shadow);
     padding-top: 50px;
     padding-bottom: 30px;
+    animation: fade-in 1s;
 }
 
 header li {
@@ -121,4 +124,26 @@ a:active {
 .copyright {
     color: var(--copyright);
     font-size: 10px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fade-down {
+    from {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
