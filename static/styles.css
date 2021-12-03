@@ -194,6 +194,7 @@ a:active {
     background-color: var(--accent);
     border: 1.5px solid var(--accent);
     font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 0, 84, 0.6);
 }
 
 .game-card a:active {
@@ -201,6 +202,7 @@ a:active {
     background-color: white;
     border: 1.5px solid white;
     font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 .footer-columns {
