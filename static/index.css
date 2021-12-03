@@ -14,20 +14,24 @@
     font-size: 28px;
 }
 
+/* .game-card images are always going to be 2:3 scaled down */
+
 .game-card {
     --rounded-edge: 20px;
+    --image-width: 250px;
+    --image-height: 375px;
     display: flex;
     align-items: stretch;
     border-radius: var(--rounded-edge);
     max-width: 800px;
-    height: 375px;
+    height: var(--image-height);
     margin: 40px auto;
     background: linear-gradient(96.39deg, rgba(0, 29, 72, 0.5) 27.05%, rgba(0, 0, 0, 0.5) 100%);
     box-shadow: 0px 22px 94px -19px rgba(0, 0, 0, 0.5);
 }
 
 .game-card img {
-    max-width: 250px;
+    width: var(--image-width);
     border-top-left-radius: var(--rounded-edge);
     border-bottom-left-radius: var(--rounded-edge);
 
