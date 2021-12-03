@@ -10,6 +10,7 @@
 html,
 body,
 div,
+button,
 form,
 fieldset,
 legend,
@@ -40,6 +41,10 @@ pre {
 a {
     color: inherit;
     text-decoration: inherit;
+}
+
+button {
+    cursor: pointer;
 }
 
 nav ul, nav ol {

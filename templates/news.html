@@ -20,8 +20,8 @@
                         </li>
                     {% endfor %}
                 </ol>
-                <button onclick="getPreviousImage(this.parentElement.querySelector('ol'), this.parentElement.querySelector('.dot-list'))">previous</button>
-                <button onclick="getNextImage(this.parentElement.querySelector('ol'), this.parentElement.querySelector('.dot-list'))">next</button>
+                <button class="prev" onclick="getPreviousImage(this.parentElement.querySelector('ol'), this.parentElement.querySelector('.dot-list'))">previous</button>
+                <button class="next" onclick="getNextImage(this.parentElement.querySelector('ol'), this.parentElement.querySelector('.dot-list'))">next</button>
                 <div class="dot-list">
                     {% for entry in thumbnail %}
                         <button class="dot {% if loop.first %} active {% endif %}" onclick="getImageByIndex({{ loop.index0 }}, this.closest('.carousel').querySelector('ol'), this.parentElement)"></button>

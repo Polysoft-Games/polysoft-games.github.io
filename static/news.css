@@ -32,6 +32,11 @@
 }
 
 /* Please fix this */
+.news-post .prev, .news-post .next {
+    color: white;
+}
+
+/* Please fix this */
 .news-post .dot {
     cursor: pointer;
     height: 15px;
