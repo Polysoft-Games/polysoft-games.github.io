@@ -7,8 +7,10 @@ body {
     background: linear-gradient(48.1deg, #00152D 0%, #3E0015 100%);
     color: rgba(255, 255, 255, 80%);
     --accent: rgba(255, 0, 84, 100%);
+    --slightly-muted-accent: rgba(255, 0, 84, 60%);
     --accent-drop-shadow: 0px 0px 30px rgba(255, 0, 84, 0.5);
     --muted: rgba(255, 255, 255, 40%);
+    --slightly-muted: rgba(255, 255, 255, 40%);
     --copyright: rgba(91, 91, 91, 100%);
     --footer: rgba(0, 0, 0, 30%);
     --footer-shadow: rgba(0, 0, 0, 25%);
@@ -53,7 +55,7 @@ footer {
     box-shadow: var(--footer-shadow);
     padding-top: 50px;
     padding-bottom: 30px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 header li {
@@ -67,13 +69,13 @@ a {
 
 a:hover {
     color: white;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 20px var(--slightly-muted);
 }
 
 a:active {
     color: var(--accent);
     transition: 0.15s;
-    text-shadow: 0 0 20px rgba(255, 0, 84, 0.6);
+    text-shadow: 0 0 20px var(--slightly-muted-accent);
 }
 
 /* CLASSES */
