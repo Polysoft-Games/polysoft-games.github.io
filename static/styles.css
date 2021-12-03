@@ -9,6 +9,7 @@ body {
     --accent: rgba(255, 0, 84, 100%);
     --accent-drop-shadow: 0px 0px 30px rgba(255, 0, 84, 0.5);
     --muted: rgba(255, 255, 255, 40%);
+    --slightly-muted: rgba(255, 255, 255, 60%);
     --copyright: rgba(91, 91, 91, 100%);
     --footer: rgba(0, 0, 0, 30%);
     --footer-shadow: rgba(0, 0, 0, 25%);
@@ -90,11 +91,6 @@ a:active {
 
 .header-socials li {
     padding: 0 10px;
-}
-
-.message {
-    text-align: center;
-    max-width: 600px;
 }
 
 .footer-columns {

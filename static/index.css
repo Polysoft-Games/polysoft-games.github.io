@@ -1,3 +1,8 @@
+.message {
+    text-align: center;
+    max-width: 500px;
+}
+
 .welcome {
     margin: 200px 0;
 }
@@ -9,9 +14,10 @@
 }
 
 .welcome h1 {
+    color: var(--slightly-muted);
     font-style: italic;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 22px;
 }
 
 /* .game-card images are always going to be 2:3 scaled down */
