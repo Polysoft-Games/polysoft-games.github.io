@@ -18,9 +18,10 @@ body {
     --muted-accent: rgba(255, 0, 84, 0.4);
     --slightly-muted-accent: rgba(255, 0, 84, 0.6);
 
-    --muted: rgba(255, 255, 255, 0.4);
     --slightly-muted: rgba(255, 255, 255, 0.7);
-    --very-muted: rgba(255, 255, 255, 0.2);
+    --muted: rgba(255, 255, 255, 0.4);
+    --very-muted: rgba(255, 255, 255, 0.3);
+    --extreemly-muted: rgba(255, 255, 255, 0.15);
 
     --footer: rgba(0, 0, 0, 0.3);
     --footer-shadow: rgba(0, 0, 0, 0.25);
@@ -155,6 +156,7 @@ a:active {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0 100px;
+    text-shadow: 0 0 20px var(--slightly-muted-accent);
 }
 
 .footer-columns li {
@@ -165,7 +167,7 @@ a:active {
 }
 
 .copyright {
-    color: var(--very-muted);
+    color: var(--extreemly-muted);
     font-size: 10px;
 }
 

@@ -56,12 +56,14 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-right: 10px;
+    text-shadow: 0 0 20px var(--very-muted);
 }
 
 .game-card .status {
     color: var(--accent);
     text-transform: uppercase;
     font-style: italic;
+    text-shadow: 0 0 20px var(--slightly-muted-accent);
 }
 
 .game-card p {
