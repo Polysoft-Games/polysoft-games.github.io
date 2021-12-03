@@ -10,5 +10,6 @@
     up the intensity. You wouldn't steal a handbag... stealing is against the
     law. PIRACY. IT'S A CRIME.
     """
+    pressKit = "rob-press-kit.zip"
     thumbnail="rob-cover.png"
 +++
