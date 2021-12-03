@@ -1,0 +1,33 @@
+{% import "macros.html" as macros %}
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="index.css">
+{% endblock head %}
+
+{% block content %}
+    <div class="welcome message">
+        <img src="polysoft-icon.svg" alt="Polysoft icon">
+        <h1>{{ config.description }} Making games is our favourite game.</h1>
+    </div>
+
+    {%- for game in section.extra.games -%}
+        <div class="game-card">
+            <img src="{{ game.thumbnail }}" alt="{{ game.title }}">
+            <div class="preview">
+                <div class="about-the-game">
+                    <div class="title">
+                        <h2>{{ game.title }}</h2>
+                        <span class="status">{{ game.status }}</span>
+                    </div>
+                    <p>{{ game.description }}</p>
+                </div>
+                <div class="game-links">
+                    <a href="{{ game.pressKit }}">Press Kit</a>
+                    <a href="">Full Website</a>
+                    <a href="">Buy</a>
+                </div>
+            </div>
+        </div>
+    {%- endfor -%}
+{% endblock content %}
