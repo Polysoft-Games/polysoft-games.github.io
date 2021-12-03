@@ -105,13 +105,14 @@ a:hover {
     margin: 40px auto;
     background: linear-gradient(96.39deg, rgba(0, 29, 72, 0.5) 27.05%, rgba(0, 0, 0, 0.5) 100%);
     box-shadow: 0px 22px 94px -19px rgba(0, 0, 0, 0.5);
+    align-items: center;
 }
 
 .game-card img {
     max-width: 250px;
-    max-height: 375px;
     border-top-left-radius: var(--rounded-edge);
     border-bottom-left-radius: var(--rounded-edge);
+
 }
 
 .game-card .preview {
@@ -168,6 +169,22 @@ a:hover {
 
     padding: 6px 20px;
     margin: 0 10px;
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+.game-card a:hover {
+    color: black;
+    background-color: var(--accent);
+    border: 1.5px solid var(--accent);
+    font-weight: 800;
+}
+
+.game-card a:active {
+    color: black;
+    background-color: white;
+    border: 1.5px solid white;
+    font-weight: 800;
 }
 
 .footer-columns {

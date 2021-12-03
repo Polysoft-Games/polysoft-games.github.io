@@ -36,13 +36,9 @@ socialLinks = [
     status = "complete"
     description = """
     Must go faster... go, go, go, go! I gave it a cold? I gave it a virus.
-    A computer virus. Hey, take a look at the earthlings. Goodbye! Do you
+    A computer virus. Hey, take a look at the earthlings. Goodbye!! Do you
     have any idea how long it takes those cups to decompose. God creates dinosaurs.
-    God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs.
-    Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
-    Checkmate... I gave it a cold? I gave it a virus. A computer virus. yeah, but your
-    scientists were so preoccupied with whether or not they could, they didn't stop to
-    think if they should.
+    God destroys dinosaurs. God creates Man. Man destroys God.
     """
     thumbnail="https://picsum.photos/600/900"
 +++
