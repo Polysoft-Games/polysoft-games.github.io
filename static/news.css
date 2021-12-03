@@ -1,0 +1,12 @@
+.news-post {
+    border-radius: 20px;
+    width: 800px;
+}
+
+.news-post .title {
+    display: flex;
+}
+
+.news-post .title time {
+    color: var(--accent);
+}

@@ -1,12 +1,21 @@
 {% extends "base.html" %}
 
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="news.css">
+{% endblock head %}
+
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
-<ul>
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+<h1>{{ section.title }}</h1>
+{% for page in section.pages %}
+    <article class="news-post">
+        <img src="{{ page.extra.thumbnail }}" alt="{{ page.title }}">
+        <div>
+            <div class="title">
+                <h2>{{ page.title }}</h2>
+                <time datetime="{{ page.date }}">{{ page.date | date(format="%d %B %Y") }}</time>
+            </div>
+            <div class="content">{{ page.content | safe }}</div>
+        </div>
+    </article>
+{% endfor %}
 {% endblock content %}
