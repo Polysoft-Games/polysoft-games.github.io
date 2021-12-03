@@ -3,7 +3,7 @@
 
     [[extra.games]]
     title = "Rob"
-    status = "pre-alpha"
+    status = "Coming Soon"
     description = """
     The ambitious debut title of Polysoft Games, Project: ROB (placeholder)
     takes all that co-op goodness you love from couch co-op games and ramps
