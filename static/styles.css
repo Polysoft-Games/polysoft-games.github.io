@@ -46,6 +46,7 @@ footer {
     box-shadow: var(--footer-shadow);
     padding-top: 50px;
     padding-bottom: 30px;
+    margin-top: 50px;
     animation: fade-in 1s;
 }
 
