@@ -19,6 +19,13 @@ body {
     align-items: center;
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 header {
@@ -47,7 +54,6 @@ footer {
     padding-top: 50px;
     padding-bottom: 30px;
     margin-top: 50px;
-    animation: fade-in 1s;
 }
 
 header li {
