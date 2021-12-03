@@ -3,6 +3,10 @@
 
 /* ELEMENTS */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(48.1deg, #00152D 0%, #3E0015 100%);
     color: rgba(255, 255, 255, 80%);

@@ -20,12 +20,12 @@ highlight_code = true
 author = "Polysoft Games"
 twitter_handle = "@PolysoftGames"
 gameLinks = [
-    { href = "", name = "ROB"},
+    { href = "/", name = "ROB"},
 ]
 
 navLinks = [
-    { href = "/about", name = "About" },
-    { href = "/games", name = "Games" },
+    { href = "/#", name = "About" },
+    { href = "/#games", name = "Games" },
     { href = "/news", name = "News" },
     { href = "/merch", name = "Merch" },
     { href = "/contact", name = "Contact"},
