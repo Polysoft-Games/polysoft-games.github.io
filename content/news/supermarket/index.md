@@ -2,7 +2,15 @@
 title = "Supermarket"
 date = 2021-03-04
 [extra]
-thumbnail = "https://picsum.photos/800/448"
+thumbnail_type = "carousel"
+thumbnail = [
+    "https://picsum.photos/800/420?random=1",
+    "https://picsum.photos/800/420?random=2",
+    "https://picsum.photos/800/420?random=3",
+    "https://picsum.photos/800/420?random=4",
+    "https://picsum.photos/800/420?random=5",
+    "https://picsum.photos/800/420?random=6",
+]
 +++
 Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists. Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. Jaguar shark! So tell me - does it really exist?
 

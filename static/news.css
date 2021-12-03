@@ -10,3 +10,49 @@
 .news-post .title time {
     color: var(--accent);
 }
+
+.news-post ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;    
+}
+
+.news-post ol li {
+    width: 800px;
+}
+
+.news-post ol li:not(.active) {
+    display: none;
+}
+
+/* Why this also? Because animations cannot be done on display: none */
+.news-post ol li.active {
+    display: block;
+    animation: fade-in 0.5s;
+}
+
+/* Please fix this */
+.news-post .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.news-post .dot.active {
+    background-color: red;
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

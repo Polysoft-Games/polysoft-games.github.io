@@ -8,7 +8,32 @@
 <h1>{{ section.title }}</h1>
 {% for page in section.pages %}
     <article class="news-post">
-        <img src="{{ page.extra.thumbnail }}" alt="{{ page.title }}">
+        {# Use image as fallback as that has an alt tag #}
+        {% set thumbnail_type = page.extra.thumbnail_type | default(value="image") %}
+        {% set thumbnail = page.extra.thumbnail %}
+        {% if thumbnail_type == "carousel" %}
+            <div class="carousel">
+                <ol>
+                    {% for entry in thumbnail %}
+                        <li {% if loop.first %} class="active" {% endif %}>
+                            <img src="{{ entry }}" alt="{{ page.title }}: image {{ loop.index }}">
+                        </li>
+                    {% endfor %}
+                </ol>
+                <button onclick="getPreviousImage(this.parentElement.querySelector('ol'), this.parentElement.querySelector('.dot-list'))">previous</button>
+                <button onclick="getNextImage(this.parentElement.querySelector('ol'), this.parentElement.querySelector('.dot-list'))">next</button>
+                <div class="dot-list">
+                    {% for entry in thumbnail %}
+                        <button class="dot {% if loop.first %} active {% endif %}" onclick="getImageByIndex({{ loop.index0 }}, this.closest('.carousel').querySelector('ol'), this.parentElement)"></button>
+                    {% endfor %}
+                </div>
+            </div>
+        {% elif thumbnail_type == "youtubeVideo" %}
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ thumbnail }}" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        {% else %}
+            <img src="{{ thumbnail }}" alt="{{ page.title }}">
+        {% endif %}
+
         <div>
             <div class="title">
                 <h2>{{ page.title }}</h2>
@@ -18,4 +43,36 @@
         </div>
     </article>
 {% endfor %}
+
+{# Setting variable as filters are resolved with lowest priority #}
+{% set thumbnail_types = section.pages | map(attribute="extra.thumbnail_type") %}
+{% if "carousel" in thumbnail_types %}
+<script>
+const DISPLAY_CLASS = "active";
+
+const getCurrentlyShownIndex = (imageList) => {
+    return Array
+        .from(imageList.children)
+        .findIndex((li) => li.classList.contains(DISPLAY_CLASS));
+}
+
+const seekImage = (getNextIndex) => (imageList, dotList) => {
+    const currentlyShownIndex = getCurrentlyShownIndex(imageList);
+    const nextIndex = getNextIndex(currentlyShownIndex, imageList.children.length);
+    for (list of [imageList, dotList]) {
+        list.children.item(currentlyShownIndex).classList.remove(DISPLAY_CLASS);
+        list.children.item(nextIndex).classList.add(DISPLAY_CLASS);
+    }
+}
+
+// Cycling backwards can't be done with '%'. This is the most elegant solution I found.
+const getPreviousImage = seekImage((index, listLength) => index === 0 ? listLength - 1 : index - 1);
+const getNextImage = seekImage((index, listLength) => (index + 1) % listLength);
+
+const getImageByIndex = (nextIndex, imageList, dotList) => {
+    seekImage(() => nextIndex)(imageList, dotList);
+}
+</script>
+{% endif %}
+
 {% endblock content %}
