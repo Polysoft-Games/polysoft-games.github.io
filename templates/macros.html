@@ -15,21 +15,3 @@
     </ul>
 </nav>
 {% endmacro %}
-
-{% macro renderGameCard(title, status, description, thumbnail) %}
-<div class="game-card">
-    <img src="{{ thumbnail }}" alt="{{ title }}">
-    <div class="preview">
-        <div class="title">
-            <h2>{{ title }}</h2>
-            <span class="status">{{ status }}</span>
-        </div>
-        <p>{{ description }}</p>
-        <div class="game-links">
-            <a href="">Press Kit</a>
-            <a href="">Full Website</a>
-            <a href="">Buy</a>
-        </div>
-    </div>
-</div>
-{% endmacro %}

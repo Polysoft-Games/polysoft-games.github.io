@@ -6,22 +6,38 @@ body {
     background: linear-gradient(48.1deg, #00152D 0%, #3E0015 100%);
     color: rgba(255, 255, 255, 80%);
     --accent: rgba(255, 0, 84, 100%);
-    --muted: rgba(255, 255, 255, 60%);
-    --copyright: rgba(255, 255, 255, 30%);
+    --accent-drop-shadow: 0px 0px 30px rgba(255, 0, 84, 0.5);
+    --muted: rgba(255, 255, 255, 40%);
+    --copyright: rgba(91, 91, 91, 100%);
     --footer: rgba(0, 0, 0, 30%);
     --footer-shadow: rgba(0, 0, 0, 25%);
+
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
-    max-width: 80vw;
+    width: 80vw;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
+main {
+    flex-grow: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 footer {
+    width: 100vw;
     text-align: center;
     background-color: var(--footer);
     box-shadow: var(--footer-shadow);
@@ -33,22 +49,20 @@ header li {
     display: inline;
 }
 
-h1, main h2 {
-    font-family: 'Barlow', sans-serif;
-}
-
-h1 {
-    font-style: italic;
-    font-weight: 500;
-    font-size: 28px;
-}
-
 a {
     color: var(--muted);
+    transition: 0.15s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+a:active {
+    color: var(--accent);
+    transition: 0.15s;
+    text-shadow: 0 0 20px rgba(255, 0, 84, 0.6);
 }
 
 /* CLASSES */
@@ -64,37 +78,38 @@ a:hover {
 }
 
 .header-navigation {
-    margin-right: 80px;
+    margin-right: 20px;
 }
 
 .header-navigation li {
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 40px;
+    padding: 0 20px;
 }
 
 .header-socials li {
     padding: 0 10px;
 }
 
-.horizontally-centered-column {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+.message {
+    text-align: center;
+    max-width: 600px;
 }
 
 .welcome {
-    text-align: center;
-    max-width: 600px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 200px 0;
 }
 
 .welcome img {
     max-width: 149px;
+    filter: drop-shadow(var(--accent-drop-shadow));
     margin-bottom: 30px;
+}
+
+.welcome h1 {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 28px;
 }
 
 .game-card {
@@ -126,6 +141,7 @@ a:hover {
 
 .game-card h2 {
     color: white;
+    font-family: 'Barlow', sans-serif;
     font-style: italic;
     font-weight: 500;
     font-size: 28px;
@@ -191,16 +207,14 @@ a:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-
 }
 
 .footer-columns h2 {
-    color: #FF0054;
+    color: var(--accent);
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin: 0 100px;
 }
 
 .footer-columns li {
