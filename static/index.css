@@ -8,12 +8,6 @@
     margin-bottom: 30px;
 }
 
-.welcome h1 {
-    font-style: italic;
-    font-weight: 500;
-    font-size: 28px;
-}
-
 /* .game-card images are always going to be 2:3 scaled down */
 
 .game-card {
